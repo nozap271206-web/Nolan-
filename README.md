@@ -11,6 +11,7 @@ Ce site est un **site fictif** dédié à l'automobile. Il ne possède **pas de 
 - Les **constructeurs mythiques** de l'histoire automobile
 - Des **marques sportives** et **luxueuses**
 - Des fiches et descriptions pour les passionnés de belles mécaniques
+- pour accéder la totalité du site veuillez utiliser le formulaire, le remplir et envoyer le formulaire, vous accederez a la suite du site web !
 
 Le design a été pensé pour offrir une expérience agréable aux visiteurs.
 
