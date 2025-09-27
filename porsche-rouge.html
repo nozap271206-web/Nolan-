@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche Rouge</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <!-- ✅ VIDÉO EN ARRIÈRE-PLAN -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="./Medias/How to put the roof down on a Porsche 911 (991.2) Speedster!.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+
+    <!-- ✅ MENU BURGER -->
+    <header>
+        <div class="menu-container">
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="file:///D:/Lyc%C3%A9e/TP/Mini%20proj/1/codage/lucas/Formulaire.html" > Nous</a>
+                <a href="accueil.html">Accueil</a>
+                <a href="BMW.html">BMW</a>
+                <a href="Porsche.html">Porsche</a>
+                <a href="Aston-Martin.html">Aston Martin</a>
+                <a href="Ferrari.html">Ferrari</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ✅ CONTENU PRINCIPAL -->
+    <main>
+        <h1>Porsche 911 Speedster</h1>
+        <p>Découvrez la Porsche 911 Speedster en vidéo.</p>
+
+        <!-- ✅ Encadré Porsche 911 Speedster -->
+        <div class="speedster-info">
+            <h2>Porsche 911 Speedster 2019 – Résumé</h2>
+            <ul>
+                <li><strong>Moteur :</strong> 6 cylindres à plat atmosphérique 4,0 L</li>
+                <li><strong>Puissance :</strong> 510 ch à 8 400 tr/min</li>
+                <li><strong>Couple :</strong> 470 Nm à 6 250 tr/min</li>
+                <li><strong>Transmission :</strong> Manuelle 6 rapports, propulsion arrière</li>
+                <li><strong>Poids à vide :</strong> 1 465 kg</li>
+                <li><strong>0–100 km/h :</strong> 4,0 secondes</li>
+                <li><strong>Vitesse max :</strong> 310 km/h</li>
+                <li><strong>Prix neuf :</strong> environ 273 000 €</li>
+                <li><strong>Design :</strong> Capote manuelle, pare-brise abaissé, sièges baquets monoblocs</li>
+                <li><strong>Particularité :</strong> Modèle exclusif et puriste, hommage aux anciens Speedster, moteur atmosphérique et boîte manuelle</li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- ✅ Script pour le menu burger -->
+    <script>
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav-links');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burger.classList.toggle('toggle');
+        });
+    </script>
+
+</body>
+</html>

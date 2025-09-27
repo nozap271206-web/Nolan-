@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Aston Martin Noir</title>
+    <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+
+    <!-- VIDÉO EN ARRIÈRE-PLAN -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="./Medias/Aston Martin db9 GT Volante  Le Film.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+
+    <!-- MENU BURGER -->
+    <header>
+        <div class="menu-container">
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+           <nav class="nav-links" id="nav-links">
+                <a href="file:///D:/Lyc%C3%A9e/TP/Mini%20proj/1/codage/lucas/Formulaire.html" > Nous</a>
+                <a href="accueil.html">Accueil</a>
+                <a href="BMW.html">BMW</a>
+                <a href="Porsche.html">Porsche</a>
+                <a href="Aston-Martin.html">Aston Martin</a>
+                <a href="Ferrari.html">Ferrari</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ✅ Cadre Caractéristiques -->
+    <div class="carac-box">
+        <h2>Caractéristiques</h2>
+        Moteur : V12 5.9 L, 450 à 540 ch<br>
+        0-100 km/h : environ 4,5–4,9 s<br>
+        Vitesse max : ~295 km/h<br>
+        Boîte : auto 6 rapports ou manuelle (anciennes)<br>
+        Châssis : aluminium, propulsion<br>
+        Style : coupé ou cabriolet luxueux,<br>
+        sonorité V12 légendaire
+    </div>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main>
+        <h1>Aston Martin DB9</h1>
+    
+    </main>
+
+    <!-- SCRIPT MENU BURGER -->
+    <script>
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav-links');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burger.classList.toggle('toggle');
+        });
+    </script>
+
+</body>
+</html>

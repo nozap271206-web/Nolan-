@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferrari Rouge</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <!-- ✅ VIDÉO EN ARRIÈRE-PLAN -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="./Medias/Ferrari SF90 Stradale - Official Video.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+
+    <!-- ✅ MENU BURGER -->
+    <header>
+        <div class="menu-container">
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+          <nav class="nav-links" id="nav-links">
+                <a href="file:///D:/Lyc%C3%A9e/TP/Mini%20proj/1/codage/lucas/Formulaire.html" > Nous</a>
+                <a href="accueil.html">Accueil</a>
+                <a href="BMW.html">BMW</a>
+                <a href="Porsche.html">Porsche</a>
+                <a href="Aston-Martin.html">Aston Martin</a>
+                <a href="Ferrari.html">Ferrari</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ✅ CONTENU PRINCIPAL -->
+    <main>
+        <h1>Ferrari SF90 Stradale</h1>
+        <p>Présentation Ferrari SF90 Stradale</p>
+
+        <!-- ✅ Encadré Ferrari SF90 Stradale -->
+        <div class="ferrari-info">
+            <ul>
+                <li><strong>Moteur thermique :</strong> V8 biturbo 4,0 L développant 769 ch à 7 500 tr/min (Wikipédia)</li>
+                <li><strong>Moteurs électriques :</strong> Trois moteurs électriques fournissant 217 ch supplémentaires (Wikipédia)</li>
+                <li><strong>Puissance totale :</strong> 986 ch (ou 1 000 ch) (Wikipédia)</li>
+                <li><strong>Couple maximal :</strong> 1 070 Nm à partir de 6 000 tr/min (Motorlegend)</li>
+                <li><strong>Transmission :</strong> Boîte automatique à 8 rapports (Motorlegend)</li>
+                <li><strong>Rouage :</strong> Transmission intégrale</li>
+                <li><strong>Prix :</strong> À partir de 450 000 €</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- ✅ Script pour le menu burger -->
+    <script>
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav-links');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burger.classList.toggle('toggle');
+        });
+    </script>
+
+</body>
+</html>

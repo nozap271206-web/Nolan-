@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW Vert</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <!-- ✅ VIDÉO EN ARRIÈRE-PLAN -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="./Medias/SWANRIVERRACINGS BAGGED JAVA GREEN M4 G82  4K .mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+
+    <!-- ✅ MENU BURGER -->
+    <header>
+        <div class="menu-container">
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+          <nav class="nav-links" id="nav-links">
+                <a href="file:///D:/Lyc%C3%A9e/TP/Mini%20proj/1/codage/lucas/Formulaire.html" > Nous</a>
+                <a href="accueil.html">Accueil</a>
+                <a href="BMW.html">BMW</a>
+                <a href="Porsche.html">Porsche</a>
+                <a href="Aston-Martin.html">Aston Martin</a>
+                <a href="Ferrari.html">Ferrari</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ✅ CONTENU PRINCIPAL -->
+    <main>
+        <h1>BMW M4</h1>
+        <p>Découvrez la BMW M4 en vidéo.</p>
+
+        <!-- ✅ Encadré BMW M4 -->
+        <div class="bmw-info">
+            <h2>BMW M4 2023 – Fiche technique</h2>
+            <ul>
+                <li><strong>Moteur :</strong> 6 cylindres en ligne 3,0 L M TwinPower Turbo</li>
+                <li><strong>Puissance :</strong> 510 ch à 6 250 tr/min</li>
+                <li><strong>Couple :</strong> 650 Nm entre 2 750 et 5 950 tr/min</li>
+                <li><strong>Transmission :</strong> Automatique 8 rapports</li>
+                <li><strong>Rouage :</strong> xDrive (4 roues motrices)</li>
+                <li><strong>Poids à vide :</strong> 1 725 kg</li>
+                <li><strong>0–100 km/h :</strong> 3,4 secondes</li>
+                <li><strong>Vitesse max :</strong> 302 km/h</li>
+                <li><strong>Prix neuf :</strong> environ 123 100 €</li>
+                <li><strong>Coffre :</strong> 440 L</li>
+                <li><strong>Dimensions :</strong> Longueur 4,79 m, Largeur 1,89 m, Hauteur 1,39 m</li>
+                <li><strong>Particularité :</strong> Version hautes performances de la Série 4 Coupé, moteur 6 cylindres en ligne 3,0 L M TwinPower Turbo</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- ✅ Script pour le menu burger -->
+    <script>
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav-links');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burger.classList.toggle('toggle');
+        });
+    </script>
+
+</body>
+</html>

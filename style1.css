@@ -1,0 +1,383 @@
+/* ======= Réglages généraux ======= */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #000;  /* au cas où la vidéo ne charge pas */
+}
+
+/* ======= Vidéo de fond ======= */
+#bg-video {
+    position: fixed;         /* couvre tout l'écran */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* adapte la vidéo sans déformation */
+    z-index: -1;             /* derrière tout */
+}
+
+/* ======= En-tête ======= */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    z-index: 20;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+/* ======= Bouton burger ======= */
+.burger {
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burger span {
+    display: block;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+/* Animation du burger quand ouvert */
+.burger.toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.toggle span:nth-child(2) {
+    opacity: 0;
+}
+.burger.toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ======= Menu latéral ======= */
+.nav-links {
+    position: fixed;
+    top: 0;
+    left: -250px;       /* caché à gauche */
+    width: 250px;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.4s ease;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background: #3498db;
+}
+
+/* Quand le menu est actif → visible */
+.nav-links.active {
+    left: 0;
+}
+
+/* ======= Contenu principal ======= */
+main {
+    position: relative;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7); /* lisible sur vidéo */
+}
+
+/* ======= Photos Porsche empilées verticalement et effet au survol ======= */
+.photo-container {
+    position: relative;
+    z-index: 1;            /* reste devant la vidéo */
+    display: flex;
+    flex-direction: column; /* empile les photos verticalement */
+    justify-content: center;
+    align-items: center;
+    gap: 30px;             /* espace entre les deux images */
+    margin-top: 40px;
+}
+
+.photo-container img {
+    width: 450px;          /* largeur plus grande */
+    height: 300px;         /* hauteur plus grande */
+    object-fit: cover;     /* recadre l'image pour remplir la zone sans déformer */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    transition: transform 0.4s ease, filter 0.4s ease; /* smooth transform + filtre */
+}
+
+/* Effet stylé au survol */
+.photo-container img:hover {
+    transform: scale(1.1) rotate(-2deg);   /* zoom + légère rotation */
+    filter: brightness(1.2) drop-shadow(0 10px 20px rgba(0,0,0,0.5)); /* lumière + ombre */
+    cursor: pointer; /* indique que c'est interactif */
+}
+
+/* ======= TITRE POUR LA PREMIÈRE IMAGE ======= */
+.photo-container a:first-child::before {
+    content: "";
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+/* ======= TITRE POUR LA DEUXIÈME IMAGE ======= */
+.photo-container a:nth-child(2)::before {
+    content: "";
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+/* ======= Encadré info Porsche grise ======= */
+.porsche-info {
+    position: absolute;
+    top: 150px;       /* ajuste selon la vidéo */
+    left: 20px;
+    width: 300px;     /* largeur de la boîte */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* fond semi-transparent */
+    color: white;
+    border: 2px solid #fff;       /* bordure blanche */
+    border-radius: 15px;
+    font-family: 'Verdana', sans-serif; /* belle police */
+    font-size: 16px;
+    line-height: 1.5;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.porsche-info h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.porsche-info ul {
+    list-style-type: none;  /* enlève les puces */
+    padding: 0;
+}
+
+.porsche-info li {
+    margin-bottom: 8px;
+}
+
+/* ======= Encadré Porsche 911 Speedster ======= */
+.speedster-info {
+    position: absolute;
+    top: 120px;          /* ajuste selon la vidéo et le menu */
+    left: 20px;          /* aligné à gauche */
+    width: 300px;        /* largeur du cadre */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* fond semi-transparent */
+    color: white;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    font-family: 'Georgia', serif;  /* jolie police pour le texte */
+    font-size: 16px;
+    line-height: 1.5;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.speedster-info h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.speedster-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.speedster-info li {
+    margin-bottom: 8px;
+}
+
+/* ======= Encadré BMW M4 ======= */
+.bmw-info {
+    position: absolute;
+    top: 120px;       /* ajuste selon la vidéo et le menu */
+    left: 20px;       /* aligné à gauche */
+    width: 300px;     /* largeur du cadre */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* fond semi-transparent */
+    color: white;
+    border: 2px solid #fff;         /* bordure blanche */
+    border-radius: 15px;
+    font-family: 'Georgia', serif;   /* jolie police pour le texte */
+    font-size: 16px;
+    line-height: 1.5;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.bmw-info h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.bmw-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bmw-info li {
+    margin-bottom: 8px;
+}
+
+
+/* ======= Encadré BMW X2 ======= */
+.bmw-x2-info {
+    position: absolute;
+    top: 120px;          /* ajuste selon la vidéo et le menu */
+    left: 20px;          /* aligné à gauche */
+    width: 300px;        /* largeur du cadre */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* fond semi-transparent */
+    color: white;
+    border: 2px solid #fff;         /* bordure blanche */
+    border-radius: 15px;
+    font-family: 'Georgia', serif;   /* jolie police pour le texte */
+    font-size: 16px;
+    line-height: 1.5;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.bmw-x2-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bmw-x2-info li {
+    margin-bottom: 8px;
+}
+
+.carac-box {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 280px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: 2px solid #ffffff33;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    text-align: left;
+    z-index: 10;
+}
+
+.carac-box h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #f5f5f5;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* ======= Encadré Aston Martin Valkyrie AMR Pro ======= */
+.aston-info {
+    position: absolute;
+    top: 120px;          /* ajuste selon la vidéo et le menu */
+    left: 20px;          /* aligné à gauche */
+    width: 300px;        /* largeur du cadre */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* fond semi-transparent */
+    color: white;
+    border: 2px solid #fff;         /* bordure blanche */
+    border-radius: 15px;
+    font-family: 'Georgia', serif;   /* jolie police pour le texte */
+    font-size: 16px;
+    line-height: 1.5;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.aston-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.aston-info li {
+    margin-bottom: 8px;
+}
+
+/* ======= Encadré Ferrari SF90 Stradale ======= */
+.ferrari-info {
+    position: absolute;
+    top: 120px;          /* ajuste selon la vidéo et le menu */
+    left: 20px;          /* aligné à gauche */
+    width: 300px;        /* largeur du cadre */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* fond semi-transparent */
+    color: white;
+    border: 2px solid #fff;         /* bordure blanche */
+    border-radius: 15px;
+    font-family: 'Georgia', serif;   /* jolie police pour le texte */
+    font-size: 16px;
+    line-height: 1.5;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.ferrari-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ferrari-info li {
+    margin-bottom: 8px;
+}
+
+/* ======= Encadré Ferrari 458 Italia ======= */
+.ferrari-info {
+    position: absolute;
+    top: 120px;          /* ajuste selon la vidéo et le menu */
+    left: 20px;          /* aligné à gauche */
+    width: 320px;        /* largeur du cadre */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* fond semi-transparent */
+    color: white;
+    border: 2px solid #fff;         /* bordure blanche */
+    border-radius: 15px;
+    font-family: 'Georgia', serif;   /* jolie police pour le texte */
+    font-size: 16px;
+    line-height: 1.5;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.ferrari-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ferrari-info li {
+    margin-bottom: 8px;
+}

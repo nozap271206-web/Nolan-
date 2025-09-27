@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferrari Marron</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <!-- ✅ VIDÉO EN ARRIÈRE-PLAN -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="./Medias/Ferrari 458 Spider video.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+
+    <!-- ✅ MENU BURGER -->
+    <header>
+        <div class="menu-container">
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+           <nav class="nav-links" id="nav-links">
+                <a href="file:///D:/Lyc%C3%A9e/TP/Mini%20proj/1/codage/lucas/Formulaire.html" > Nous</a>
+                <a href="accueil.html">Accueil</a>
+                <a href="BMW.html">BMW</a>
+                <a href="Porsche.html">Porsche</a>
+                <a href="Aston-Martin.html">Aston Martin</a>
+                <a href="Ferrari.html">Ferrari</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ✅ CONTENU PRINCIPAL -->
+    <main>
+        <h1>Ferrari 458 Italia</h1>
+        <p>Découvrez la Ferrari 458 Italia.</p>
+
+        <!-- ✅ Encadré Ferrari 458 Italia -->
+        <div class="ferrari-info">
+            <ul>
+                <li><strong>Moteur :</strong> V8 atmosphérique 4,5 L</li>
+                <li><strong>Puissance :</strong> 570 ch à 9 000 tr/min</li>
+                <li><strong>Couple :</strong> 540 Nm à 6 000 tr/min</li>
+                <li><strong>Transmission :</strong> Boîte robotisée à double embrayage 7 rapports</li>
+                <li><strong>Rouage :</strong> Propulsion arrière</li>
+                <li><strong>0–100 km/h :</strong> 3,4 secondes</li>
+                <li><strong>Vitesse maximale :</strong> 325 km/h</li>
+                <li><strong>Poids à vide :</strong> ~1 380 kg</li>
+                <li><strong>Prix neuf :</strong> Environ 230 000 €</li>
+                <li><strong>Design :</strong> Carrosserie aérodynamique, portes classiques, habitacle orienté performance</li>
+                <li><strong>Particularité :</strong> Son moteur V8 atmosphérique offre un son emblématique et des performances proches d’une supercar de course</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- ✅ Script pour le menu burger -->
+    <script>
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav-links');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burger.classList.toggle('toggle');
+        });
+    </script>
+
+</body>
+</html>

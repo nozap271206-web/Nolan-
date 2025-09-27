@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche Grise</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <!-- ✅ VIDÉO EN ARRIÈRE-PLAN -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="./Medias/The new Porsche 911. Timeless machine..mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+
+    <!-- ✅ MENU BURGER -->
+    <header>
+        <div class="menu-container">
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="file:///D:/Lyc%C3%A9e/TP/Mini%20proj/1/codage/lucas/Formulaire.html" > Nous</a>
+                <a href="accueil.html">Accueil</a>
+                <a href="BMW.html">BMW</a>
+                <a href="Porsche.html">Porsche</a>
+                <a href="Aston-Martin.html">Aston Martin</a>
+                <a href="Ferrari.html">Ferrari</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ✅ CONTENU PRINCIPAL -->
+    <main>
+        <!-- Texte Porsche à gauche -->
+        <div class="porsche-info">
+            <h2>Porsche 911 Carrera S 3.8 – Résumé</h2>
+            <ul>
+                <li><strong>Moteur :</strong> 6 cylindres à plat (boxer) de 3,8 L, 400 ch, 440 Nm</li>
+                <li><strong>Transmission :</strong> Propulsion arrière avec boîte PDK 7 rapports</li>
+                <li><strong>Performances :</strong> 0-100 km/h en 4,1 s, vitesse max ~306 km/h</li>
+                <li><strong>Dimensions & poids :</strong> 4,49 m de long, 1,81 m de large, 1,29 m de haut, poids ~1 415 kg</li>
+                <li><strong>Consommation & émissions :</strong> 8,7 L/100 km en mixte, 205 g/km de CO₂</li>
+                <li><strong>Prix neuf :</strong> environ 107 500 €</li>
+                <li><strong>Année de commercialisation :</strong> à partir de 2012</li>
+            </ul>
+        </div>
+
+        <p>Découvrez la Porsche 911 nouvelle génération en vidéo.</p>
+    </main>
+
+    <!-- ✅ Script du menu -->
+    <script>
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav-links');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burger.classList.toggle('toggle');
+        });
+    </script>
+
+</body>
+</html>

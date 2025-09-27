@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aston Martin Jaune</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <!-- ✅ VIDÉO EN ARRIÈRE-PLAN -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="./Medias/Onboard Valkyrie AMR Pro at Paul Ricard  Aston Martin UNLEASHED.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+
+    <!-- ✅ MENU BURGER (identique aux autres pages) -->
+    <header>
+        <div class="menu-container">
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+          <nav class="nav-links" id="nav-links">
+                <a href="file:///D:/Lyc%C3%A9e/TP/Mini%20proj/1/codage/lucas/Formulaire.html" > Nous</a>
+                <a href="accueil.html">Accueil</a>
+                <a href="BMW.html">BMW</a>
+                <a href="Porsche.html">Porsche</a>
+                <a href="Aston-Martin.html">Aston Martin</a>
+                <a href="Ferrari.html">Ferrari</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ✅ CONTENU PRINCIPAL -->
+    <main>
+        <h1>Aston Martin Valkyrie pro</h1>
+        <p>Présentation Aston Martin Valkyrie AMR Pro</p>
+
+        <!-- ✅ Encadré Aston Martin Valkyrie AMR Pro -->
+        <div class="aston-info">
+            <ul>
+                <li><strong>Moteur :</strong> V12 atmosphérique 6,5 L (~1 000 ch)</li>
+                <li><strong>Transmission :</strong> Boîte séquentielle 7 rapports</li>
+                <li><strong>Poids :</strong> ~1 006 kg</li>
+                <li><strong>0–100 km/h :</strong> ~2,5 secondes</li>
+                <li><strong>Vitesse max :</strong> ~402 km/h</li>
+                <li><strong>Prix :</strong> ~4,2 millions de $</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- ✅ Script du menu burger -->
+    <script>
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav-links');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burger.classList.toggle('toggle');
+        });
+    </script>
+
+</body>
+</html>

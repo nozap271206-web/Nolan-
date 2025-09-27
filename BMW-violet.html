@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW X2 Violet</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <!-- ✅ VIDÉO EN ARRIÈRE-PLAN -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="./Medias/Stunning BMW X2 in Rare Purple – The Ultimate Head-Turner!.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+
+    <!-- ✅ MENU BURGER -->
+    <header>
+        <div class="menu-container">
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+           <nav class="nav-links" id="nav-links">
+                <a href="file:///D:/Lyc%C3%A9e/TP/Mini%20proj/1/codage/lucas/Formulaire.html" > Nous</a>
+                <a href="accueil.html">Accueil</a>
+                <a href="BMW.html">BMW</a>
+                <a href="Porsche.html">Porsche</a>
+                <a href="Aston-Martin.html">Aston Martin</a>
+                <a href="Ferrari.html">Ferrari</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ✅ CONTENU PRINCIPAL -->
+    <main>
+        <h1>BMW X2 Violet</h1>
+        <p>Voici une video de présentation de la BMW X2.</p>
+
+        <!-- ✅ Encadré BMW X2 -->
+        <div class="bmw-x2-info">
+            <ul>
+                <li><strong>Moteur :</strong> 4 cylindres turbo de 2,0 L</li>
+                <li><strong>Puissance :</strong> 241 ch à 4 500 tr/min</li>
+                <li><strong>Couple :</strong> 400 Nm</li>
+                <li><strong>Transmission :</strong> Boîte automatique à 8 rapports</li>
+                <li><strong>Poids à vide :</strong> 1 664 kg</li>
+                <li><strong>0–100 km/h :</strong> 6,2 secondes</li>
+                <li><strong>Vitesse max :</strong> 210 km/h</li>
+                <li><strong>Prix neuf :</strong> à partir de 38 600 $</li>
+                <li><strong>Consommation :</strong> 27 MPG (environ 8,7 L/100 km)</li>
+                <li><strong>Transmission intégrale :</strong> xDrive28i</li>
+                <li><strong>Dimensions :</strong> Longueur 4,56 m, Largeur 1,84 m, Hauteur 1,53 m</li>
+                <li><strong>Volume coffre :</strong> 21,6 pi³ (environ 612 L)</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- ✅ Script pour le menu burger -->
+    <script>
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav-links');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burger.classList.toggle('toggle');
+        });
+    </script>
+
+</body>
+</html>
